@@ -38,4 +38,4 @@ def primes(count=None):
         return "Please select a natural number lower or equal to 1000."
     # Return prime.html with list of prime numbers
     return render_template("primes.html", count=str(count),
-                           primes=str(pc.primes(count)))
+                           primes=str(pc.primes(count-1)))
