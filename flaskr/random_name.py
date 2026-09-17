@@ -17,6 +17,10 @@ lis_names = ["Cherish", "Damaris", "Oren", "Nona", "Rhona", "Jackqueline",
              "Letha", "Brianne", "Bennie", "Nancy", "Shaina", "Kelvin"]
 
 
+def _stringify_name(name):
+    return str(name)
+
+
 def random_name():  # nosec
     index = random.randint(0, len(lis_names)-1)
-    return str(lis_names[index])
+    return _stringify_name(lis_names[index])
