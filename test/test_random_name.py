@@ -23,3 +23,6 @@ def test_randomness():
     for _ in range(10):
         result.append(random_name.random_name())
     assert expected == result
+def test_stringify_name():
+    assert random_name._stringify_name("Arshiya") == "Arshiya"
+    assert random_name._stringify_name(123) == "123"
