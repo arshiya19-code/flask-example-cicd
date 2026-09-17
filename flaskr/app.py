@@ -32,10 +32,10 @@ def hello_random():
 @app.route('/primes/')
 @app.route('/primes/<int:count>')
 def primes(count=None):
-    if count is None or count == 0:
+    if count is None or count == 0: 
         return render_template("primes.html")
     if count > 1000:
         return "Please select a natural number lower or equal to 1000."
     # Return prime.html with list of prime numbers
     return render_template("primes.html", count=str(count),
-                           primes=str(pc.primes(count)))
+                           primes=str(pc.primes(count-1)))
